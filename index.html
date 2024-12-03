@@ -12,12 +12,12 @@
         
         <!-- Formulario para agregar nuevas reservas -->
         <form id="form-reserva">
+            <input type="date" id="fecha-ingreso" placeholder="Ingreso" required>
+            <input type="date" id="fecha-salida" placeholder="Salida" required>
             <input type="text" id="nombre" placeholder="Nombre" required>
             <input type="text" id="apellido" placeholder="Apellido" required>
             <input type="text" id="dni" placeholder="DNI" required>
             <input type="text" id="contacto" placeholder="Contacto" required>
-            <input type="date" id="fecha-ingreso" required>
-            <input type="date" id="fecha-salida" required>
             <input type="number" id="monto-reserva" placeholder="Reserva" required>
             <input type="number" id="monto-restante" placeholder="Restante" required>
             <button type="submit">Agregar Reserva</button>
@@ -27,12 +27,12 @@
         <table id="tabla-reservas">
             <thead>
                 <tr>
+                    <th>Ingreso</th>
+                    <th>Salida</th>
                     <th>Nombre</th>
                     <th>Apellido</th>
                     <th>DNI</th>
                     <th>Contacto</th>
-                    <th>Ingreso</th>
-                    <th>Salida</th>
                     <th>Reserva</th>
                     <th>Restante</th>
                 </tr>
