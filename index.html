@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Reservas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Reservas de Alquiler Temporario</h1>
+        
+        <!-- Formulario para agregar nuevas reservas -->
+        <form id="form-reserva">
+            <input type="text" id="nombre" placeholder="Nombre" required>
+            <input type="text" id="apellido" placeholder="Apellido" required>
+            <input type="text" id="dni" placeholder="DNI" required>
+            <input type="text" id="contacto" placeholder="Contacto" required>
+            <input type="date" id="fecha-ingreso" required>
+            <input type="date" id="fecha-salida" required>
+            <input type="number" id="monto-reserva" placeholder="Reserva" required>
+            <input type="number" id="monto-restante" placeholder="Restante" required>
+            <button type="submit">Agregar Reserva</button>
+        </form>
+
+        <!-- Tabla para mostrar las reservas -->
+        <table id="tabla-reservas">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>DNI</th>
+                    <th>Contacto</th>
+                    <th>Ingreso</th>
+                    <th>Salida</th>
+                    <th>Reserva</th>
+                    <th>Restante</th>
+                </tr>
+            </thead>
+            <tbody id="reservas-body">
+                <!-- Aquí se llenarán las reservas -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
