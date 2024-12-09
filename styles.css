@@ -1,11 +1,12 @@
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Cambiado a flex-start para que el contenido se alinee al inicio */
-    min-height: 100vh; /* Cambiado a min-height para permitir que el contenido crezca */
+    align-items: flex-start;
+    min-height: 100vh;
     background-color: #f4f4f4;
 }
 
@@ -51,7 +52,7 @@ button:hover {
 
 table {
     width: 100%;
-    margin-top: 30px; /* Aumentar margen superior para evitar superposición */
+    margin-top: 30px;
     border-collapse: collapse;
     background-color: #fff;
     table-layout: auto;
@@ -79,6 +80,20 @@ tr:hover {
     background-color: #f1f1f1;
 }
 
+/* Estilo específico para los inputs de tipo date */
+input[type="date"] {
+    appearance: none; /* Esto evita que el navegador cambie el estilo del input en algunos casos */
+    -webkit-appearance: none; /* Para navegadores webkit como Safari */
+    -moz-appearance: none; /* Para Firefox */
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: white;
+}
+
+
+
 /* Estilo especial para el botón de eliminar */
 button.btn-eliminar {
     background-color: #ff4d4d;
@@ -95,6 +110,15 @@ button.btn-eliminar:hover {
     background-color: #e60000;
 }
 
+/* Contenedor de la tabla con desplazamiento horizontal */
+.table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Para dispositivos táctiles */
+    margin: 20px 0;
+    max-height: 400px; /* Limitar la altura de la tabla */
+    border: 1px solid #ddd;
+}
+
 /* Responsividad en pantallas pequeñas */
 @media (max-width: 768px) {
     .container {
@@ -103,31 +127,26 @@ button.btn-eliminar:hover {
     }
 
     /* Hacemos la tabla desplazable horizontalmente */
+    .table-container {
+        overflow-x: auto;
+        max-height: 400px; /* Limitar la altura de la tabla */
+    }
+
     table {
         width: 100%;
-        display: block;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+        table-layout: auto;
     }
 
-    /* Ocultamos los encabezados en pantallas pequeñas */
-    thead {
-        display: block;
-    }
-
-    tr {
-        display: table-row;
+    th, td {
         padding: 10px;
-        border: 1px solid #ddd;
-        background-color: #fff;
+        text-align: left;
+        font-size: 14px;
     }
 
-    td {
-        display: table-cell; /* Volvemos las celdas a su formato horizontal */
-        text-align: left;
-        padding: 12px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
+    /* Añadimos un margen inferior a las filas para mayor separación */
+    tr {
+        margin-bottom: 10px;
     }
 }
+
 
